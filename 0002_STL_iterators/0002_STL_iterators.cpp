@@ -83,21 +83,21 @@ int main(int argc, char* argv[])
 	// --- advance - сдвиг ---
 	myVector = { 1, 9, 44, 422, 676, 78 };
 	vector<int>::iterator i = myVector.begin();
-	cout << *(i + 3) << endl;							// обычное смещение на 3 поизиции
-	advance(i, 3);										// сдвиг итератора на 3 позиции
+	cout << *(i + 3) << endl;			// обычное смещение на 3 поизиции
+	advance(i, 3);					// сдвиг итератора на 3 позиции
 	cout << *i << endl;
 
 	// --- insert (вставить) ---
-	myVector = { 1, 9, 44, 422, 676, 78 };				// заполнить вектор 
-	vector<int>::iterator itr = myVector.begin();		// итератор - в начало 
+	myVector = { 1, 9, 44, 422, 676, 78 };		// заполнить вектор 
+	vector<int>::iterator itr = myVector.begin();	// итератор - в начало 
 
-	//myVector.insert(itr, 999);						// вставить начало
+	//myVector.insert(itr, 999);			// вставить начало
 
 	//itr++;
-	//myVector.insert(itr, 999);						// вставить со двигом на 1
+	//myVector.insert(itr, 999);			// вставить со двигом на 1
 
 	advance(itr, 5);
-	myVector.insert(itr, 999);							// вcтавить 5-м элементом 
+	myVector.insert(itr, 999);			// вcтавить 5-м элементом 
 	cout << "\n======= Insert =======\n";
 	for (vector<int>::iterator i = myVector.begin(); i != myVector.end(); i++)
 		cout << *i << " ";
@@ -106,8 +106,8 @@ int main(int argc, char* argv[])
 	// --- erase (удалить) ---
 	myVector = { 1, 9, 44, 422, 676, 78 };
 	vector<int>::iterator itErase = myVector.begin();	// новый итератор
-	itErase++;											// cдвинуть
-	myVector.erase(itErase, itErase + 3);					// удалить элементы из области 0...3
+	itErase++;						// cдвинуть
+	myVector.erase(itErase, itErase + 3);			// удалить элементы из области 0...3
 
 	cout << "\n======== Erase =======\n";
 	for (vector<int>::iterator i = myVector.begin(); i != myVector.end(); i++)
